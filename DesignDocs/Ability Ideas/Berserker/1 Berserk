@@ -1,0 +1,20 @@
+Berserk
+
+Passive
+Berserker 1
+
+
+
+When your rage reaches 10, enrage.
+While enraged, you gain +4 strength.
+While enraged, you lose control of yourself.
+While enraged, you cannot gain rage.
+At the end of each turn while enraged, you lose 4 rage. You lose 2 rage instead if you attacked during that turn.
+
+==
+
+If you're not controlling yourself, a low-tier AI is.
+
+==
+
+Should this be less complicated? Perhaps cut the 4 rage to 2?

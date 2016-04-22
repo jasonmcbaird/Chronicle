@@ -1,0 +1,5 @@
+Mana
+
+You start each battle with a pool of energy equal to 5 plus your Will.
+If you have multiple classes, the default 5 points don't stack but the stat-based bonuses do.
+Example: A Fate with 6 Will would have 11 Mana. If they gained the Necromancer class, they would add Will again, resulting in 17 mana.

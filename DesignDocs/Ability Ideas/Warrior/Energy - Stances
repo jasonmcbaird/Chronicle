@@ -1,0 +1,7 @@
+Stances
+
+Stances are mutually-exclusive passives.
+Switch to a new one as a free action.
+Some abilities are only available in a certain stance.
+
+How to implement this: When you gain a stance, also gain an active ability that's tied to it. The active ability turns it on or off.

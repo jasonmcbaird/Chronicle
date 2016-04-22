@@ -1,0 +1,17 @@
+Law of Demeter violations:
+
+
+Encounter:
+
+	CheckTriggers. Character actually does the checking; Encounter just passes it along.
+
+
+Character:
+	Energy. Energy is stored in Roles, yet you access it through Character.
+	
+	Abilities. Character knows the abilities that each of its Roles have.
+	
+	Activate. Currently, charater.activate(ability, target) just results in ability.activate(source, target).
+	
+	
+	I don't get it

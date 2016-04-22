@@ -1,0 +1,25 @@
+TERMS (Glossary)
+
+
+Manager - An object that makes decisions about how characters act.
+
+Player - Human playing the game, controlling a team of characters. Is a Manager.
+
+Conductor - AI that acts like a player. Can answer any question that would be posed to a player. Is a Manager.
+
+Team - Set of characters that fight together against other teams. Can include only one character.
+	Has relationships with each other team in an encounter: allied, neutral, or hostile.
+
+Character - An individual being. Belongs to a Team, which determines how they interact with other characters.
+
+AICharacter - A character controlled by the AI.
+
+PlayerCharacter - A character controlled by the player. There can be several, theoretically even some on different teams.
+
+Inventory - A set of items a character holds.
+
+Cart - A team's inventory, separate from each character's inventory.
+
+Allegiance - Which team a character belongs to.
+
+Item - A physical item a character can use or equip. Use could destroy the item or not.

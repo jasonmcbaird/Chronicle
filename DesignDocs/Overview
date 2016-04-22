@@ -1,0 +1,30 @@
+Chronicle is a turn-based RPG. Characters move around on a square grid, then use Abilities to affect each other.
+Chronicle is arranged in a sequence of Encounters, where one side of Characters faces off against another.
+Each Character in an Encounter takes turns moving around and activating Abilities.
+Each character starts out with a pool of health. When that health drops to 0, the Character dies.
+When only one side of Characters is victorious, the Encounter ends.
+
+Characters are represented on the grid by Sprites, pictures of the character that can animate and move around.
+They also have HealthBars that hover over the Sprites to show the user how injured they are.
+The player interacts with the game by moving the Character(s) they control around on the map, looking at a CombatMenu that shows which
+Abilities the Character they're controlling has access to, and selecting which Ability to use.
+
+Characters are defined by their CharacterClasses. Each Character has up to four CharacterClasses. Each CharacterClass
+comes with a set of Abilities, which the Character gains access to if they're high enough level in that class.
+For example, Flin can be a level 10 Warrior, level 3 Berserker, level 2 General, and level 1 Purger. His set of abilities contains
+all the abilities each of those classes has at the listed level or below.
+
+When a Character activates an Ability, they must also choose a target Character. The Ability then modifies the source and/or
+target Character in various ways. For example, Shatter forces the target to take damage, reducing their health.
+The most important methods an Ability has to affect a Character are, currently, triggers. Triggers are events that wait to happen
+until a certain action is taken by the Character. The ability stores the effects of each trigger.
+
+For example, when a Warrior hits a Mage with the Ability ShieldBash, ShieldBash sets a trigger that will execute the next time the
+Mage tries to use an ability. ShieldBash prevents the Mage from using the ability, and then the trigger is cleared so that it will
+not happen again.
+
+Sometimes, activating an Ability requires enough of a certain EnergyType. For example, to cast Frostbolt successfully, a Character must
+have access to at least 2 Mana. How much energy a Character has is determined by which CharacterClasses they have; some CharacterClasses
+have an EnergyBar that keeps track of how much Energy they have available and how much Energy they can store when they're full.
+Like health, most EnergyBars start out full and then drain throughout the encounter. Each EnergyBar has an EnergyType, and only
+fuels abilities that use that EnergyType.

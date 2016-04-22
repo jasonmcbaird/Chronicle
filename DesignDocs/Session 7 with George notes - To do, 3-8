@@ -1,0 +1,59 @@
+Things to change:
+
+
+ROLE
+How to create a new role.
+Builder class
+	Subclasses for each Role
+Make a setter for energy that throws an exception. Tells other coders not to use setEnergy
+
+
+CHARACTER
+New class: Characteristic/Attribute
+	Stored in a hash
+	Accessible with an enum
+New class: Bonuses
+New class: Energy
+Note: to get strength, character.characteristics.getStrength(), not character.getStrength()
+Don’t set variables when you declare them, set them in the constructor. private int dodgeBonus = 0 is bad
+
+
+ENCOUNTER
+Encounters should have rounds, where each round, all teams act in sequence. While a team is acting, all characters on that team act in any order.
+
+
+ACTION
+Anything can put an action in a queue.
+MovePhase and ActPhase and ReactPhase never do anything directly, they just put things in the queue.
+
+
+ABILITY
+How to structure an ability design doc
+New class: Rule. Write up a class for each step in each ability’s description.
+
+
+ABILITY subclasses
+Put (Name, LevelObtained, Passive?) in its own config file (a struct) for each ability.
+
+
+QUEUE
+Queue: A list of events that will happen. Each has a character activating it, a target, and a condition to be activated on.
+Queue.notify(condition, character)
+One condition is Override. Fire everything with the Override condition whenever you would fire anything.
+When you start publishing, put a stop event at the bottom of the queue. That way, items in the queue can add to the queue without introducing an infinite loop, and items in the queue can delete items from the queue.
+Note: Check overrides after you finish running a queue, too
+Events on the queue can cancel or affect other events
+
+
+EVENT
+repost(condition, character) - put this same thing back at the bottom of the queue
+
+
+RULE
+Rule traits:
+	You get one condition: when rage bar fills, when attack, while berserk, etc.
+	One action: set more rules, set attribute, remove other rules
+	Methods: Constructor
+		Notify (when you fire from the queue)
+		
+Do TDD before you start next app. All abilities, rules, in a completely separate file.

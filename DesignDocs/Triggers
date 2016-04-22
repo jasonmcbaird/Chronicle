@@ -1,0 +1,28 @@
+	//Triggers: behavior that gets invoked when a certain Character method is called. May replace the correct behavior.
+	// Example: Poison. Triggers when Character takes an action; deals damage to that player. Sticks around until cured.
+	// Example: Freeze. Triggers when Character would take an action; cancels that action and has a chance of being cured.
+	// Example: Stun. Triggers when Character would take an action; cancels that action and cures itself.
+	// Example: Protection. Triggers when Character would take damage; take less damage instead.
+	
+	// When an ability sets a trigger on a character, it passes the trigger condition and itself.
+	// The character then stores these values. Whenever the character hits a possible trigger condition, it checks
+	//		its list of triggers. If any should go off, it passes itself and the stored message
+	//		back to the ability that created the trigger. The ability then performs some behavior with the information given.
+	// Whenever a trigger fires, a boolean return value is sent back from the ability in question. If this value is true,
+	//		proceed normally. If it's false, cancel the action that triggered it.
+	
+	
+	
+	
+	
+	Issues with triggers:
+	
+	They end up everywhere. I want them to be as flexible as possible, but that means checking them in really weird places.
+	Right now, Character checks triggers and Encounter checks triggers, each at various times. Once I refactor Encounter
+	to deal with Turns, Turn and each Phase will also check triggers. That's a lot of knowledge spread throughout Chronicle.
+	
+	Sometimes they require information they don't have. Example: The GAIN_RAGE triggerCondition should really be GAIN_ENERGY,
+	and then should care about the type of energy being gained. That's not possible currently, because when a character checks if a
+	trigger's set for GAIN_ENERGY, all you tell it is GAIN_ENERGY and the character. Example 2: If I want a Purger to have an
+	aura that affects all nearby allies, I'd need Aura to ask Character to ask Encounter to ask Map what allies are nearby, and then
+	Aura would set up triggers on each of those characters.

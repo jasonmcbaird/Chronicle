@@ -1,0 +1,9 @@
+Start combat with no patience.
+At the end of each of your turns, if you don't attack, you gain one patience.
+Whenever you attack, you lose all your patience.
+Abilities cost patience.
+Some attacks cost patience; they also reset your patience to zero.
+
+Note: You lose patience after your attack is resolved, not before.
+	This can contribute to effects that care about how much patience you have,
+	or let you spend your remaining patience.

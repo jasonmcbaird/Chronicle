@@ -1,0 +1,18 @@
+UI
+
+UIStack keeps track of all the UIComponents that have been displayed to the player but have not been deleted.
+
+
+UIComponents:
+
+Grid
+	Displays entities on a grid with background art. Entities can move around, appear, disappear, or be replaced. For example, every encounter displays a grid on which characters can move around and attack each other.
+
+Menu
+	Displays various options the player can select. For example, when a character takes their turn in combat, they can select from various abilities to use.
+
+Display
+	Displays pure information. For example, when the player hovers their cursor over a character during combat, the game displays their available energy and basic combat stats.
+	
+Conversation
+	Displays dialogue. User input allowed: progress forward in the conversation or make a choice on what you want to say.

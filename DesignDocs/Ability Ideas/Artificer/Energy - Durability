@@ -1,0 +1,4 @@
+Durability
+
+Each active ability starts with a number of "Durability." Every time you use an ability, the number ticks down by one.
+While it's at zero, you cannot use the ability. Each ability's durability resets at the end and start of every encounter.

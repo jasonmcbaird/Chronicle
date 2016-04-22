@@ -1,0 +1,22 @@
+Dominate
+
+Active
+Psion 10
+
+7 Cooldown
+
+Gain control of an enemy at 2 or less range.
+Lasts a number of turns equal one plus (the difference between your Intellect and the target's Will) divided by four.
+Minimum 2 turns.
+
+==
+
+Example numbers:
+10 Int vs 8 Will: 2 turns
+22 Int vs 18 Will: 2 turns
+22 Int vs 14 Will: 3 turns
+26 Int vs 8 Will: 5 turns
+
+==
+
+Not enough variability in duration?
