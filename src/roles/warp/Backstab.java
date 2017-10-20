@@ -40,7 +40,7 @@ public class Backstab extends Ability {
 		Move teleportOtherSide = getTeleport(GridLogic.getDirection(source, target), -random);
 		
 		Queue.addAndRun(teleportOtherSide, source, source, Condition.NOW);
-		if(teleportSide.succeeded())
+		if(teleportOtherSide.succeeded())
 			return true;
 		return false;
 	}
